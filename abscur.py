@@ -4,9 +4,10 @@ src_url = "https://docs.google.com/spreadsheets/d/1_-cdNCIC6NgyRDj0zLJBaohXo-K8q
 
 import pandas as pd
 
-__abs_data__ = None
+__abs_data__ = None # сюда загружаем таблицу с данными
 
 def get_data():
+    """ Функция отдает (загружает сначала) таблицу с абсолютными курсами """
     global __abs_data__
     if __abs_data__ is None:
         __abs_data__ = pd.read_csv(src_url,decimal=',',parse_dates=True,index_col=0)
