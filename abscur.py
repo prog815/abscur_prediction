@@ -8,5 +8,5 @@ import pandas as pd
 
 def get_data():
     if __abs_data__ is None:
-        __abs_data__pd.read_csv(src_url,decimal=',',parse_dates=True,index_col=0)
+        __abs_data__ = pd.read_csv(src_url,decimal=',',parse_dates=True,index_col=0)
     return __abs_data__
